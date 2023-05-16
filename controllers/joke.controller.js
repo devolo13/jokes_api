@@ -13,7 +13,8 @@ module.exports.findAllJokes = (req, res) => {
 module.exports.findOneJoke = (req, res) => {
   Joke.findOne({ _id: req.params.id })
     .then((oneJoke) => {
-      res.json({ joke: oneJoke });
+      // res.json({ joke: oneJoke });
+      res.json(oneJoke);
     })
     .catch((err) => {
       res.json(err);
